@@ -92,7 +92,8 @@ export default function HackLoom() {
       {/* ── NAVBAR ── */}
       <nav className="fixed top-0 inset-x-0 z-50 h-24 flex justify-between items-center px-4 md:px-20 bg-[#050505]/80 backdrop-blur-2xl border-b border-white/[0.06]">
         <span className="font-black text-xl md:text-2xl tracking-[-0.03em] uppercase">TERRATECH</span>
-        <div className="flex items-center gap-10">
+        <div className="flex items-center gap-4 md:gap-10">
+          <CoordinatorWidget isNavbar className="flex" />
           <span className="hidden md:block text-[11px] font-mono font-bold tracking-[0.5em] uppercase text-white/30">MAY 02 · 2026</span>
           <motion.button
             whileHover={{ scale: 1.05, backgroundColor: '#F59E0B', color: '#000' }} whileTap={{ scale: 0.95 }}
@@ -192,8 +193,6 @@ export default function HackLoom() {
             </motion.button>
           </motion.div>
 
-          {/* Coordinator widget — bottom-center on mobile, top-right on desktop */}
-          <CoordinatorWidget className="absolute bottom-20 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:top-24 md:right-16 z-10 flex flex-col items-center md:items-end gap-2" />
 
           {/* scroll cue */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 0.4 }} transition={{ delay: 1.4 }}
@@ -222,10 +221,10 @@ export default function HackLoom() {
         </div>
 
         {/* ══════════════════════ THE EVENT ══════════════════════ */}
-        <section className="border-t border-white/[0.06] px-6 md:px-20 py-32 md:py-56 w-full overflow-hidden text-center flex flex-col items-center" style={{ textAlign: 'center' }}>
-          <div className="max-w-7xl mx-auto flex flex-col items-center text-center gap-16 md:gap-28" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%' }}>
-            <div className="w-full flex justify-center items-center text-center min-h-[30vh] md:min-h-0 mb-4 md:mb-16" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
-              <h2 className="font-black text-5xl md:text-8xl lg:text-9xl tracking-[-0.04em] uppercase leading-none text-center" style={{ textAlign: 'center', width: '100%' }}>
+        <section className="border-t border-white/[0.06] px-6 md:px-20 py-24 md:py-40 w-full overflow-hidden flex flex-col items-center justify-center">
+          <div className="max-w-7xl mx-auto flex flex-col items-center text-center gap-8 md:gap-12 w-full">
+            <div className="w-full flex justify-center items-center text-center">
+              <h2 className="font-black text-5xl md:text-8xl lg:text-9xl tracking-[-0.04em] uppercase leading-none text-center">
                 <RevealText text="THE EVENT." />
               </h2>
             </div>
@@ -247,10 +246,10 @@ export default function HackLoom() {
         </section>
 
         {/* ══════════════════════ HOW IT WORKS ══════════════════════ */}
-        <section className="border-t border-white/[0.06] px-6 md:px-16 py-20 md:py-40 w-full text-center flex flex-col items-center" style={{ textAlign: 'center' }}>
-          <div className="max-w-5xl mx-auto flex flex-col items-center text-center gap-14 md:gap-24 w-full" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%' }}>
-            <div className="w-full flex justify-center items-center text-center min-h-[30vh] md:min-h-0 mb-4 md:mb-16" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
-              <h2 className="font-black text-4xl md:text-8xl tracking-[-0.03em] uppercase leading-none text-center" style={{ textAlign: 'center', width: '100%' }}>
+        <section className="border-t border-white/[0.06] px-6 md:px-16 py-24 md:py-40 w-full flex flex-col items-center justify-center">
+          <div className="max-w-5xl mx-auto flex flex-col items-center text-center gap-12 md:gap-20 w-full">
+            <div className="w-full flex justify-center items-center text-center">
+              <h2 className="font-black text-4xl md:text-8xl tracking-[-0.03em] uppercase leading-none text-center">
                 <RevealText text="HOW IT WORKS." />
               </h2>
             </div>
@@ -279,10 +278,10 @@ export default function HackLoom() {
         </section>
 
         {/* ══════════════════════ HOW YOU WIN ══════════════════════ */}
-        <section className="border-t border-white/[0.06] px-6 md:px-16 py-20 md:py-40 w-full text-center flex flex-col items-center" style={{ textAlign: 'center' }}>
-          <div className="max-w-5xl mx-auto flex flex-col items-center text-center gap-14 md:gap-24 w-full" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%' }}>
-            <div className="w-full flex justify-center items-center text-center min-h-[30vh] md:min-h-0 mb-4 md:mb-16" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
-              <h2 className="font-black text-4xl md:text-8xl tracking-[-0.03em] uppercase leading-none text-center" style={{ textAlign: 'center', width: '100%' }}>
+        <section className="border-t border-white/[0.06] px-6 md:px-16 py-24 md:py-40 w-full flex flex-col items-center justify-center">
+          <div className="max-w-5xl mx-auto flex flex-col items-center text-center gap-12 md:gap-20 w-full">
+            <div className="w-full flex justify-center items-center text-center">
+              <h2 className="font-black text-4xl md:text-8xl tracking-[-0.03em] uppercase leading-none text-center">
                 <RevealText text="HOW YOU WIN." />
               </h2>
             </div>
@@ -334,10 +333,10 @@ export default function HackLoom() {
         </section>
 
         {/* ══════════════════════ RULES ══════════════════════ */}
-        <section className="border-t border-white/[0.06] px-6 md:px-16 py-24 md:py-48 w-full text-center flex flex-col items-center" style={{ textAlign: 'center' }}>
-          <div className="max-w-5xl mx-auto flex flex-col items-center text-center gap-14 md:gap-24 w-full" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%' }}>
-            <div className="w-full flex justify-center items-center text-center min-h-[30vh] md:min-h-0 mb-4 md:mb-16" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
-              <h2 className="font-black text-4xl md:text-8xl tracking-[-0.03em] uppercase leading-none text-center" style={{ textAlign: 'center', width: '100%' }}>
+        <section className="border-t border-white/[0.06] px-6 md:px-16 py-24 md:py-40 w-full flex flex-col items-center justify-center">
+          <div className="max-w-5xl mx-auto flex flex-col items-center text-center gap-12 md:gap-20 w-full">
+            <div className="w-full flex justify-center items-center text-center">
+              <h2 className="font-black text-4xl md:text-8xl tracking-[-0.03em] uppercase leading-none text-center">
                 <RevealText text="THE RULES." />
               </h2>
             </div>
@@ -358,10 +357,10 @@ export default function HackLoom() {
         </section>
 
         {/* ══════════════════════ TERMS ══════════════════════ */}
-        <section className="border-t border-white/[0.06] px-6 md:px-16 py-24 md:py-48 w-full text-center flex flex-col items-center" style={{ textAlign: 'center' }}>
-          <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-14 md:gap-20 w-full" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%' }}>
-            <div className="w-full flex justify-center items-center text-center min-h-[30vh] md:min-h-0 mb-4 md:mb-16" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
-              <h2 className="font-black text-4xl md:text-7xl tracking-[-0.03em] uppercase leading-none text-center" style={{ textAlign: 'center', width: '100%' }}>
+        <section className="border-t border-white/[0.06] px-6 md:px-16 py-24 md:py-40 w-full flex flex-col items-center justify-center">
+          <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-12 md:gap-16 w-full">
+            <div className="w-full flex justify-center items-center text-center">
+              <h2 className="font-black text-4xl md:text-7xl tracking-[-0.03em] uppercase leading-none text-center">
                 <RevealText text="TERMS & CONDITIONS." />
               </h2>
             </div>
@@ -377,7 +376,7 @@ export default function HackLoom() {
         </section>
 
         {/* ══════════════════════ REGISTER ══════════════════════ */}
-        <section id="register" className="border-t border-white/[0.06] min-h-[95dvh] px-6 md:px-20 py-24 flex flex-col justify-center items-center text-center gap-0 relative overflow-hidden">
+        <section id="register" className="border-t border-white/[0.06] min-h-[95dvh] px-6 md:px-20 pt-24 pb-48 md:pb-64 flex flex-col justify-center items-center text-center gap-0 relative overflow-hidden">
           <FlipText
             className="font-black text-[30vw] sm:text-[26vw] md:text-[22vw] lg:text-[20vw] uppercase tracking-[-0.04em] leading-[0.7] text-amber-400 select-none mb-4 md:mb-6 w-full"
             duration={0.6}

@@ -11,7 +11,41 @@ const coordinators = [
   },
 ];
 
-export function CoordinatorWidget({ className }: { className?: string }) {
+export function CoordinatorWidget({ className, isNavbar = false }: { className?: string; isNavbar?: boolean }) {
+  if (isNavbar) {
+    return (
+      <div className={className ?? "flex items-center gap-2 md:gap-4"}>
+        <div className="hidden xs:flex flex-col items-end -gap-1">
+          <p className="text-[7px] tracking-[0.2em] text-white/20 uppercase">
+            Questions?
+          </p>
+          <div className="flex items-center gap-1">
+            <div className="w-1 h-1 rounded-full bg-green-400 animate-pulse" />
+            <span className="text-[7px] tracking-widest text-white/20 uppercase">
+              Online
+            </span>
+          </div>
+        </div>
+        <div className="flex items-center -space-x-2">
+          {coordinators.map((c, i) => (
+            <a
+              key={i}
+              href={`https://wa.me/${c.phone}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative group transition-transform hover:z-10 hover:scale-110"
+              title={`WhatsApp ${c.name}`}
+            >
+              <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-[#050505] group-hover:border-amber-400/50 transition-all duration-300">
+                <img src={c.avatar} alt={c.name} className="w-full h-full object-cover" />
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={className ?? "absolute top-24 right-6 md:right-16 z-10 flex flex-col items-end gap-2"}>
       <p className="text-[9px] tracking-[0.25em] text-white/25 uppercase mb-1">
