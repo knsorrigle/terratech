@@ -15,13 +15,13 @@ export function CoordinatorWidget({ className, isNavbar = false }: { className?:
   if (isNavbar) {
     return (
       <div className={className ?? "flex items-center gap-2 md:gap-4"}>
-        <div className="hidden xs:flex flex-col items-end -gap-1">
-          <p className="text-[7px] tracking-[0.2em] text-white/20 uppercase">
-            Questions?
+        <div className="flex flex-col items-end gap-0.5">
+          <p className="text-[6.5px] xs:text-[8px] font-mono font-bold tracking-[0.1em] xs:tracking-[0.15em] text-white/40 uppercase leading-none">
+            Contact Coordinators
           </p>
           <div className="flex items-center gap-1">
-            <div className="w-1 h-1 rounded-full bg-green-400 animate-pulse" />
-            <span className="text-[7px] tracking-widest text-white/20 uppercase">
+            <div className="w-0.5 h-0.5 xs:w-1 xs:h-1 rounded-full bg-green-400 animate-pulse" />
+            <span className="text-[6.5px] xs:text-[7px] tracking-widest text-white/20 uppercase">
               Online
             </span>
           </div>
@@ -48,8 +48,8 @@ export function CoordinatorWidget({ className, isNavbar = false }: { className?:
 
   return (
     <div className={className ?? "absolute top-24 right-6 md:right-16 z-10 flex flex-col items-end gap-2"}>
-      <p className="text-[9px] tracking-[0.25em] text-white/25 uppercase mb-1">
-        Coordinators
+      <p className="text-[9px] font-mono font-bold tracking-[0.25em] text-white/40 uppercase mb-1">
+        Contact Coordinators
       </p>
       <div className="flex items-center gap-2">
         {coordinators.map((c, i) => (

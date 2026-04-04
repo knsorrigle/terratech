@@ -67,7 +67,7 @@ function Para({ children, speed = 0.2 }: { children: React.ReactNode; speed?: nu
 
 const inView = (delay = 0, dir: 'up' | 'left' | 'right' = 'up') => ({
   hidden: { opacity: 0, x: dir === 'left' ? -50 : dir === 'right' ? 50 : 0, y: dir === 'up' ? 32 : 0 },
-  show: { opacity: 1, x: 0, y: 0, transition: { duration: 1, delay, ease: [0.16, 1, 0.3, 1] } },
+  show: { opacity: 1, x: 0, y: 0, transition: { duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] } },
 });
 
 export default function HackLoom() {
@@ -97,7 +97,7 @@ export default function HackLoom() {
           <span className="hidden md:block text-[11px] font-mono font-bold tracking-[0.5em] uppercase text-white/30">MAY 02 · 2026</span>
           <motion.button
             whileHover={{ scale: 1.05, backgroundColor: '#F59E0B', color: '#000' }} whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.15, ease: 'easeOut' }}
+            transition={{ duration: 0.1, ease: 'easeOut' }}
             onClick={() => document.getElementById('register')?.scrollIntoView({ behavior: 'smooth' })}
             className="h-10 md:h-12 px-6 md:px-10 rounded-xl bg-white text-black text-sm md:text-base font-black tracking-tight shadow-[0_0_30px_rgba(255,255,255,0.05)]"
           >
@@ -153,7 +153,7 @@ export default function HackLoom() {
             {/* headline */}
             <motion.h1
               initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
               className="font-black text-[13vw] sm:text-[10.5vw] md:text-[9vw] uppercase tracking-[-0.03em] leading-[1.0] w-full max-w-6xl"
             >
               <span className="block">BUILD WITHOUT</span>
@@ -184,8 +184,9 @@ export default function HackLoom() {
 
             {/* CTA */}
             <motion.button
-              initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.65, duration: 0.9 }}
-              whileHover={{ scale: 1.05, backgroundColor: '#F59E0B', color: '#000' }} whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.65, duration: 0.6 }}
+              whileHover={{ scale: 1.05, backgroundColor: '#F59E0B', color: '#000', transition: { duration: 0.1 } }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => window.open('https://forms.google.com/placeholder', '_blank')}
               className="bg-[#f5f5f5] text-[#0c1012] font-black text-sm md:text-2xl tracking-[0.15em] uppercase px-10 py-4 md:py-8 md:px-20 rounded-xl shadow-[0_0_40px_rgba(255,255,255,0.05)] w-full max-w-xs md:max-w-none md:w-auto"
             >
@@ -376,9 +377,9 @@ export default function HackLoom() {
         </section>
 
         {/* ══════════════════════ REGISTER ══════════════════════ */}
-        <section id="register" className="border-t border-white/[0.06] min-h-[95dvh] px-6 md:px-20 pt-24 pb-48 md:pb-64 flex flex-col justify-center items-center text-center gap-0 relative overflow-hidden">
+        <section id="register" className="border-t border-white/[0.06] min-h-[95dvh] px-6 md:px-20 py-24 flex flex-col justify-center items-center text-center gap-0 relative overflow-hidden">
           <FlipText
-            className="font-black text-[30vw] sm:text-[26vw] md:text-[22vw] lg:text-[20vw] uppercase tracking-[-0.04em] leading-[0.7] text-amber-400 select-none mb-4 md:mb-6 w-full"
+            className="font-black text-[30vw] sm:text-[26vw] md:text-[22vw] lg:text-[20vw] uppercase tracking-[-0.04em] leading-[0.7] text-amber-400 select-none mb-8 md:mb-12 -mt-10 md:-mt-16 w-full"
             duration={0.6}
             loop={true}
             delayBetweenWords={0.09}
@@ -399,7 +400,8 @@ export default function HackLoom() {
             </p>
 
             <motion.button
-              whileHover={{ scale: 1.05, backgroundColor: '#F59E0B', color: '#000' }} whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05, backgroundColor: '#F59E0B', color: '#000', transition: { duration: 0.1 } }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => window.open('https://forms.google.com/placeholder', '_blank')}
               className="bg-white text-[#0c1012] w-auto py-5 md:py-9 px-14 md:px-28 rounded-xl font-black tracking-[0.2em] text-base md:text-3xl uppercase shadow-[0_0_50px_rgba(255,255,255,0.1)]"
             >
