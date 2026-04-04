@@ -122,7 +122,7 @@ export default function App() {
       <main className="relative z-10 pb-12 text-center">
 
         {/* ═══════════════════════════════════ HERO ═══════════════════════════════════ */}
-        <section ref={heroRef} className="min-h-[100dvh] flex flex-col items-center text-center px-6 md:px-16 pt-28 pb-20 md:justify-center relative overflow-hidden">
+        <section ref={heroRef} className="min-h-[100dvh] flex flex-col justify-center items-center text-center px-6 md:px-16 pt-24 pb-20 relative overflow-hidden">
 
           <motion.div style={{ y: heroY, opacity: heroOp }} className="flex flex-col items-center w-full gap-10">
             {/* pill */}
@@ -170,8 +170,8 @@ export default function App() {
             </motion.button>
           </motion.div>
 
-          {/* Coordinator widget — bottom on mobile, absolute top-right on desktop */}
-          <CoordinatorWidget className="relative md:absolute md:top-24 md:right-16 z-10 flex flex-col items-center md:items-end mt-8 md:mt-0" />
+          {/* Coordinator widget — bottom-center on mobile, top-right on desktop */}
+          <CoordinatorWidget className="absolute bottom-20 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:top-24 md:right-16 z-10 flex flex-col items-center md:items-end gap-2" />
 
           {/* scroll cue */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 0.4 }} transition={{ delay: 1.4 }}
@@ -203,7 +203,7 @@ export default function App() {
         <section className="border-t border-white/[0.06] px-6 md:px-20 py-32 md:py-56 w-full overflow-hidden text-center flex flex-col items-center" style={{ textAlign: 'center' }}>
           <div className="max-w-7xl mx-auto flex flex-col items-center text-center gap-16 md:gap-28" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%' }}>
             {/* title */}
-            <div className="w-full flex justify-center text-center pt-4 md:pt-0 mb-10 md:mb-20" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
+            <div className="w-full flex justify-center items-center text-center min-h-[30vh] md:min-h-0 mb-4 md:mb-16" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
               <h2 className="font-black text-5xl md:text-8xl lg:text-9xl tracking-[-0.04em] uppercase leading-none text-center" style={{ textAlign: 'center', width: '100%' }}>
                 <RevealText text="THE EVENT." />
               </h2>
@@ -228,7 +228,7 @@ export default function App() {
         {/* ════════ HOW IT WORKS ════════ */}
         <section className="border-t border-white/[0.06] px-6 md:px-16 py-20 md:py-40 w-full text-center flex flex-col items-center" style={{ textAlign: 'center' }}>
           <div className="max-w-5xl mx-auto flex flex-col items-center text-center gap-14 md:gap-24 w-full" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%' }}>
-            <div className="w-full flex justify-center text-center pt-4 md:pt-0 mb-10 md:mb-20" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
+            <div className="w-full flex justify-center items-center text-center min-h-[30vh] md:min-h-0 mb-4 md:mb-16" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
               <h2 className="font-black text-4xl md:text-8xl tracking-[-0.03em] uppercase leading-none text-center" style={{ textAlign: 'center', width: '100%' }}>
                 <RevealText text="HOW IT WORKS." />
               </h2>
@@ -259,7 +259,7 @@ export default function App() {
         {/* ════════ HOW YOU WIN ════════ */}
         <section className="border-t border-white/[0.06] px-6 md:px-16 py-20 md:py-40 w-full text-center flex flex-col items-center" style={{ textAlign: 'center' }}>
           <div className="max-w-5xl mx-auto flex flex-col items-center text-center gap-14 md:gap-24 w-full" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%' }}>
-            <div className="w-full flex justify-center text-center pt-4 md:pt-0 mb-10 md:mb-20" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
+            <div className="w-full flex justify-center items-center text-center min-h-[30vh] md:min-h-0 mb-4 md:mb-16" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
               <h2 className="font-black text-4xl md:text-8xl tracking-[-0.03em] uppercase leading-none text-center" style={{ textAlign: 'center', width: '100%' }}>
                 <RevealText text="HOW YOU WIN." />
               </h2>
@@ -313,7 +313,7 @@ export default function App() {
         {/* ════════ RULES ════════ */}
         <section className="border-t border-white/[0.06] px-6 md:px-16 py-24 md:py-48 w-full text-center flex flex-col items-center" style={{ textAlign: 'center' }}>
           <div className="max-w-5xl mx-auto flex flex-col items-center text-center gap-14 md:gap-24 w-full" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%' }}>
-            <div className="w-full flex justify-center text-center pt-4 md:pt-0 mb-10 md:mb-20" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
+            <div className="w-full flex justify-center items-center text-center min-h-[30vh] md:min-h-0 mb-4 md:mb-16" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
               <h2 className="font-black text-4xl md:text-8xl tracking-[-0.03em] uppercase leading-none text-center" style={{ textAlign: 'center', width: '100%' }}>
                 <RevealText text="THE RULES." />
               </h2>
@@ -338,7 +338,7 @@ export default function App() {
         {/* ════════ TERMS ════════ */}
         <section className="border-t border-white/[0.06] px-6 md:px-16 py-24 md:py-48 w-full text-center flex flex-col items-center" style={{ textAlign: 'center' }}>
           <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-14 md:gap-20 w-full" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%' }}>
-            <div className="w-full flex justify-center text-center pt-4 md:pt-0 mb-10 md:mb-20" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
+            <div className="w-full flex justify-center items-center text-center min-h-[30vh] md:min-h-0 mb-4 md:mb-16" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
               <h2 className="font-black text-4xl md:text-7xl tracking-[-0.03em] uppercase leading-none text-center" style={{ textAlign: 'center', width: '100%' }}>
                 <RevealText text="TERMS & CONDITIONS." />
               </h2>
