@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'mot
 import RevealText from './components/RevealText.tsx';
 import { FlipText } from './components/ui/flip-text';
 import { MaskedAvatars } from './components/ui/masked-avatars';
+import { CoordinatorWidget } from './components/CoordinatorWidget.tsx';
 
 const RULES = [
   { id: '01', title: 'NO MANUAL CODING', desc: 'Every line must be AI-prompted. No exceptions.' },
@@ -121,59 +122,7 @@ export default function App() {
       <main className="relative z-10 pb-12 text-center">
 
         {/* ═══════════════════════════════════ HERO ═══════════════════════════════════ */}
-        <section ref={heroRef} className="min-h-[100dvh] flex flex-col justify-center items-center text-center px-6 md:px-16 pt-24 pb-20 relative overflow-hidden">
-
-          {/* ── Contact Coordinators Widget ── */}
-          {(() => {
-            const coordinators = [
-              {
-                avatar: "https://api.dicebear.com/9.x/initials/svg?seed=KC&chars=2&backgroundColor=F5A623&textColor=000000&fontSize=38&fontWeight=700",
-                name: "Kruthi C",
-                phone: "919445858807"
-              },
-              {
-                avatar: "https://api.dicebear.com/9.x/initials/svg?seed=MZ&chars=2&backgroundColor=ffffff&textColor=000000&fontSize=38&fontWeight=700",
-                name: "Muizzah",
-                phone: "919035702955"
-              }
-            ];
-            return (
-              <div className="absolute top-24 right-6 md:right-16 z-10 flex flex-col items-end gap-2">
-                <p className="text-[9px] tracking-[0.25em] text-white/25 uppercase mb-1">
-                  Coordinators
-                </p>
-                <div className="flex items-center gap-2">
-                  {coordinators.map((c, i) => (
-                    <a
-                      key={i}
-                      href={`https://wa.me/${c.phone}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex flex-col items-center gap-1 group"
-                      title={`WhatsApp ${c.name}`}
-                    >
-                      <div className="w-10 h-10 rounded-full overflow-hidden border border-white/10 group-hover:border-amber-400/50 transition-all duration-300 group-hover:scale-110">
-                        <img
-                          src={c.avatar}
-                          alt={c.name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <span className="text-[8px] tracking-widest text-white/20 group-hover:text-amber-400 transition-colors uppercase whitespace-nowrap">
-                        {c.name.split(' ')[0]}
-                      </span>
-                    </a>
-                  ))}
-                </div>
-                <div className="flex items-center gap-1 mt-1">
-                  <div className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                  <span className="text-[8px] tracking-widest text-white/20 uppercase">
-                    Available on WhatsApp
-                  </span>
-                </div>
-              </div>
-            );
-          })()}
+        <section ref={heroRef} className="min-h-[100dvh] flex flex-col items-center text-center px-6 md:px-16 pt-28 pb-20 md:justify-center relative overflow-hidden">
 
           <motion.div style={{ y: heroY, opacity: heroOp }} className="flex flex-col items-center w-full gap-10">
             {/* pill */}
@@ -221,6 +170,9 @@ export default function App() {
             </motion.button>
           </motion.div>
 
+          {/* Coordinator widget — bottom on mobile, absolute top-right on desktop */}
+          <CoordinatorWidget className="relative md:absolute md:top-24 md:right-16 z-10 flex flex-col items-center md:items-end mt-8 md:mt-0" />
+
           {/* scroll cue */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 0.4 }} transition={{ delay: 1.4 }}
             className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
@@ -251,7 +203,7 @@ export default function App() {
         <section className="border-t border-white/[0.06] px-6 md:px-20 py-32 md:py-56 w-full overflow-hidden text-center flex flex-col items-center" style={{ textAlign: 'center' }}>
           <div className="max-w-7xl mx-auto flex flex-col items-center text-center gap-16 md:gap-28" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%' }}>
             {/* title */}
-            <div className="w-full flex justify-center text-center" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
+            <div className="w-full flex justify-center text-center pt-4 md:pt-0 mb-10 md:mb-20" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
               <h2 className="font-black text-5xl md:text-8xl lg:text-9xl tracking-[-0.04em] uppercase leading-none text-center" style={{ textAlign: 'center', width: '100%' }}>
                 <RevealText text="THE EVENT." />
               </h2>
@@ -276,7 +228,7 @@ export default function App() {
         {/* ════════ HOW IT WORKS ════════ */}
         <section className="border-t border-white/[0.06] px-6 md:px-16 py-20 md:py-40 w-full text-center flex flex-col items-center" style={{ textAlign: 'center' }}>
           <div className="max-w-5xl mx-auto flex flex-col items-center text-center gap-14 md:gap-24 w-full" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%' }}>
-            <div className="w-full flex justify-center text-center" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
+            <div className="w-full flex justify-center text-center pt-4 md:pt-0 mb-10 md:mb-20" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
               <h2 className="font-black text-4xl md:text-8xl tracking-[-0.03em] uppercase leading-none text-center" style={{ textAlign: 'center', width: '100%' }}>
                 <RevealText text="HOW IT WORKS." />
               </h2>
@@ -307,7 +259,7 @@ export default function App() {
         {/* ════════ HOW YOU WIN ════════ */}
         <section className="border-t border-white/[0.06] px-6 md:px-16 py-20 md:py-40 w-full text-center flex flex-col items-center" style={{ textAlign: 'center' }}>
           <div className="max-w-5xl mx-auto flex flex-col items-center text-center gap-14 md:gap-24 w-full" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%' }}>
-            <div className="w-full flex justify-center text-center" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
+            <div className="w-full flex justify-center text-center pt-4 md:pt-0 mb-10 md:mb-20" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
               <h2 className="font-black text-4xl md:text-8xl tracking-[-0.03em] uppercase leading-none text-center" style={{ textAlign: 'center', width: '100%' }}>
                 <RevealText text="HOW YOU WIN." />
               </h2>
@@ -361,7 +313,7 @@ export default function App() {
         {/* ════════ RULES ════════ */}
         <section className="border-t border-white/[0.06] px-6 md:px-16 py-24 md:py-48 w-full text-center flex flex-col items-center" style={{ textAlign: 'center' }}>
           <div className="max-w-5xl mx-auto flex flex-col items-center text-center gap-14 md:gap-24 w-full" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%' }}>
-            <div className="w-full flex justify-center text-center" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
+            <div className="w-full flex justify-center text-center pt-4 md:pt-0 mb-10 md:mb-20" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
               <h2 className="font-black text-4xl md:text-8xl tracking-[-0.03em] uppercase leading-none text-center" style={{ textAlign: 'center', width: '100%' }}>
                 <RevealText text="THE RULES." />
               </h2>
@@ -386,7 +338,7 @@ export default function App() {
         {/* ════════ TERMS ════════ */}
         <section className="border-t border-white/[0.06] px-6 md:px-16 py-24 md:py-48 w-full text-center flex flex-col items-center" style={{ textAlign: 'center' }}>
           <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-14 md:gap-20 w-full" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%' }}>
-            <div className="w-full flex justify-center text-center" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
+            <div className="w-full flex justify-center text-center pt-4 md:pt-0 mb-10 md:mb-20" style={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
               <h2 className="font-black text-4xl md:text-7xl tracking-[-0.03em] uppercase leading-none text-center" style={{ textAlign: 'center', width: '100%' }}>
                 <RevealText text="TERMS & CONDITIONS." />
               </h2>

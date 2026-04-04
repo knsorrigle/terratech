@@ -11,9 +11,9 @@ const coordinators = [
   },
 ];
 
-export function CoordinatorWidget() {
+export function CoordinatorWidget({ className }: { className?: string }) {
   return (
-    <div className="absolute top-24 right-6 md:right-16 z-10 flex flex-col items-end gap-2">
+    <div className={className ?? "absolute top-24 right-6 md:right-16 z-10 flex flex-col items-end gap-2"}>
       <p className="text-[9px] tracking-[0.25em] text-white/25 uppercase mb-1">
         Coordinators
       </p>
