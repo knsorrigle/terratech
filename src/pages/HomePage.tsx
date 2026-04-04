@@ -110,20 +110,36 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full max-w-[90vw] mx-auto border-x border-b border-white/[0.06] flex items-center justify-between px-10 md:px-16 py-6"
+          className="w-full max-w-[90vw] mx-auto border-x border-b border-white/[0.06] flex flex-col md:flex-row"
         >
-          <span className="text-[9px] md:text-[10px] font-mono font-bold tracking-[0.4em] uppercase text-white/20">
-            Two Events · Apr 22 & May 02 2026
-          </span>
-          <div className="flex items-center gap-8 md:gap-12">
-            <div className="flex flex-col items-end gap-0.5">
-              <span className="font-black text-lg md:text-2xl text-amber-400 tracking-tight leading-none">5 HRS</span>
-              <span className="text-[8px] font-mono tracking-[0.3em] uppercase text-white/20">Prompthon</span>
+          {/* Under Prompthon */}
+          <div className="flex-1 flex items-center justify-between px-10 md:px-16 py-5 border-b md:border-b-0 md:border-r border-white/[0.06]">
+            <span className="text-[9px] font-mono font-bold tracking-[0.4em] uppercase text-white/20">Prompthon</span>
+            <div className="flex items-center gap-6">
+              <div className="flex flex-col items-end gap-0.5">
+                <span className="font-black text-lg md:text-2xl text-amber-400 tracking-tight leading-none">APR 22</span>
+                <span className="text-[8px] font-mono tracking-[0.3em] uppercase text-white/20">Date</span>
+              </div>
+              <div className="w-px h-8 bg-white/[0.06]" />
+              <div className="flex flex-col items-end gap-0.5">
+                <span className="font-black text-lg md:text-2xl text-amber-400 tracking-tight leading-none">5 HRS</span>
+                <span className="text-[8px] font-mono tracking-[0.3em] uppercase text-white/20">Duration</span>
+              </div>
             </div>
-            <div className="w-px h-8 bg-white/[0.06]" />
-            <div className="flex flex-col items-end gap-0.5">
-              <span className="font-black text-lg md:text-2xl text-amber-400 tracking-tight leading-none">24 HRS</span>
-              <span className="text-[8px] font-mono tracking-[0.3em] uppercase text-white/20">HackLoom</span>
+          </div>
+          {/* Under HackLoom */}
+          <div className="flex-1 flex items-center justify-between px-10 md:px-16 py-5">
+            <span className="text-[9px] font-mono font-bold tracking-[0.4em] uppercase text-white/20">HackLoom 2.0</span>
+            <div className="flex items-center gap-6">
+              <div className="flex flex-col items-end gap-0.5">
+                <span className="font-black text-lg md:text-2xl text-amber-400 tracking-tight leading-none">MAY 02</span>
+                <span className="text-[8px] font-mono tracking-[0.3em] uppercase text-white/20">Date</span>
+              </div>
+              <div className="w-px h-8 bg-white/[0.06]" />
+              <div className="flex flex-col items-end gap-0.5">
+                <span className="font-black text-lg md:text-2xl text-amber-400 tracking-tight leading-none">24 HRS</span>
+                <span className="text-[8px] font-mono tracking-[0.3em] uppercase text-white/20">Duration</span>
+              </div>
             </div>
           </div>
         </motion.div>
