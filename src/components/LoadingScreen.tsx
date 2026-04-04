@@ -48,7 +48,7 @@ export function LoadingScreen() {
               fontFamily: 'Inter, sans-serif',
             }}
           >
-            TERRATECH · APR 21 & MAY 02 2026
+            TERRATECH · APR 22 & MAY 02 2026
           </motion.p>
         </motion.div>
       )}

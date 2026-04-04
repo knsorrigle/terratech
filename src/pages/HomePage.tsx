@@ -10,7 +10,7 @@ export default function HomePage() {
       {/* ── NAVBAR ── */}
       <nav className="fixed top-0 inset-x-0 z-50 h-20 flex justify-between items-center px-6 md:px-20 bg-[#050505]/90 backdrop-blur-2xl border-b border-white/[0.05]">
         <span className="font-black text-xl tracking-[-0.03em] uppercase">TERRATECH</span>
-        <span className="text-[10px] font-mono font-bold tracking-[0.5em] uppercase text-white/30">APR 21 · 2026</span>
+        <span className="text-[10px] font-mono font-bold tracking-[0.5em] uppercase text-white/30">APR 22 & MAY 02 · 2026</span>
       </nav>
 
       {/* ── MAIN ── */}
@@ -113,7 +113,7 @@ export default function HomePage() {
           className="w-full max-w-[90vw] mx-auto border-x border-b border-white/[0.06] flex items-center justify-between px-10 md:px-16 py-6"
         >
           <span className="text-[9px] md:text-[10px] font-mono font-bold tracking-[0.4em] uppercase text-white/20">
-            Two Events · One Day · Apr 21 2026
+            Two Events · Apr 22 & May 02 2026
           </span>
           <div className="flex items-center gap-8 md:gap-12">
             <div className="flex flex-col items-end gap-0.5">

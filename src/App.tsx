@@ -12,7 +12,7 @@ const RULES = [
   { id: '05', title: 'ORIGINAL WORK', desc: 'No pre-built templates or existing codebases.' },
   { id: '06', title: 'TEAM SIZE', desc: '2 to 4 members per team.' },
   { id: '07', title: 'TIME LIMIT', desc: '5 hours from problem reveal to submission.' },
-  { id: '08', title: 'ONSPOT REG', desc: 'Available April 21 at the venue.' }
+  { id: '08', title: 'ONSPOT REG', desc: 'Available April 22 at the venue.' }
 ];
 
 const TERMS = [
@@ -26,7 +26,7 @@ const TERMS = [
   { title: 'PRIVACY', text: 'Registration data used only for event coordination. Never shared with third parties.' }
 ];
 
-const TICKER_ITEMS = ['PROMPTHON', 'APR 21 2026', '5 HOURS', 'AI ONLY', 'TERRATECH', 'BUILD WITH WORDS', 'WIN WITH PRECISION', 'REGISTER NOW →'];
+const TICKER_ITEMS = ['PROMPTHON', 'APR 22 2026', '5 HOURS', 'AI ONLY', 'TERRATECH', 'BUILD WITH WORDS', 'WIN WITH PRECISION', 'REGISTER NOW →'];
 
 const AccordionItem: React.FC<{ title: string; text: string }> = ({ title, text }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -94,7 +94,7 @@ export default function App() {
       <nav className="fixed top-0 inset-x-0 z-50 h-24 flex justify-between items-center px-4 md:px-20 bg-[#050505]/80 backdrop-blur-2xl border-b border-white/[0.06]">
         <span className="font-black text-xl md:text-2xl tracking-[-0.03em] uppercase">PROMPTHON</span>
         <div className="flex items-center gap-10">
-          <span className="hidden md:block text-[11px] font-mono font-bold tracking-[0.5em] uppercase text-white/30">APR 21 · 2026</span>
+          <span className="hidden md:block text-[11px] font-mono font-bold tracking-[0.5em] uppercase text-white/30">APR 22 · 2026</span>
           <motion.button
             whileHover={{ scale: 1.05, backgroundColor: '#F59E0B', color: '#000' }} whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.15, ease: 'easeOut' }}
@@ -203,7 +203,7 @@ export default function App() {
             >
               <span>5 HOURS</span>
               <span className="w-1 h-1 rounded-full bg-white/20" />
-              <span>APR 21 2026</span>
+              <span>APR 22 2026</span>
               <span className="w-1 h-1 rounded-full bg-white/20" />
               <span>AI ONLY</span>
               <span className="w-1 h-1 rounded-full bg-white/20" />
@@ -234,7 +234,7 @@ export default function App() {
 
         {/* ════════ 1px BORDER ROW — basement grid ════════ */}
         <div className="flex justify-center gap-24 md:gap-40 border-t border-white/[0.06] w-full max-w-4xl mx-auto text-center" style={{ display: 'flex', justifyContent: 'center', textAlign: 'center', width: '100%' }}>
-          {[{ v: 'APR 21', l: 'DATE' }, { v: '5 HRS', l: 'DURATION' }, { v: '2–4', l: 'TEAM SIZE' }].map((s, i) => (
+          {[{ v: 'APR 22', l: 'DATE' }, { v: '5 HRS', l: 'DURATION' }, { v: '2–4', l: 'TEAM SIZE' }].map((s, i) => (
             <motion.div key={s.l}
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.8, delay: i * 0.1 }}
@@ -265,7 +265,7 @@ export default function App() {
               </Para>
               <div className="flex flex-wrap items-center justify-center gap-x-16 gap-y-8 text-sm md:text-base font-mono font-bold tracking-[0.45em] uppercase" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign: 'center', width: '100%' }}>
                 <span className="text-white/40" style={{ textAlign: 'center' }}>Venue — TBA</span>
-                <span className="text-white/40" style={{ textAlign: 'center' }}>April 21, 2026</span>
+                <span className="text-white/40" style={{ textAlign: 'center' }}>April 22, 2026</span>
                 <span className="text-white/40" style={{ textAlign: 'center' }}>Onspot reg available</span>
                 <span className="text-amber-500" style={{ textAlign: 'center' }}>By TERRATECH</span>
               </div>
